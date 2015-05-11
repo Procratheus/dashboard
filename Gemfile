@@ -24,6 +24,7 @@ group :development, :test do
   gem 'better_errors', '~> 2.1.1'
   gem 'binding_of_caller', '~> 0.7.2'
   gem 'annotate', '~> 2.6.8' 	
+  gem 'pry-rails', '~> 0.3.4'
 end
 
 group :production do
