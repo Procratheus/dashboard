@@ -12,6 +12,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.10'
 gem 'bootstrap-sass', '~> 3.3.4.1'
 gem 'devise', '~> 3.4.1'
+gem 'omniauth-facebook'
+gem 'figaro', '~> 1.1.0'
+gem 'pundit', '~> 1.0.0'
 
 group :development, :test do
   gem 'byebug'
