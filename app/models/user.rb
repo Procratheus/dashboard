@@ -43,7 +43,8 @@ class User < ActiveRecord::Base
       user.password = Devise.friendly_token[0,20]
       user.name = auth.info.name
      # user.image = auth.info.image implement this when you implement refile
-   end
+      user.skip_confirmation!
+    end
   end       
 
 end

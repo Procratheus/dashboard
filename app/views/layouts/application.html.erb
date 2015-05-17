@@ -9,7 +9,9 @@
 </head>
 <body>
 
-<%= yield %>
-
+  <%= render "partials/nav" %>
+  <%= render "partials/flash" %>
+  <%= yield %>
+  <%= render "partials/footer" %>
 </body>
 </html>
