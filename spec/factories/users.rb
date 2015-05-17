@@ -22,6 +22,7 @@
 #  updated_at             :datetime
 #  provider               :string
 #  uid                    :string
+#  image_id               :string
 #
 # Indexes
 #

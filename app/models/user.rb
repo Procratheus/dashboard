@@ -22,6 +22,7 @@
 #  updated_at             :datetime
 #  provider               :string
 #  uid                    :string
+#  image_id               :string
 #
 # Indexes
 #
@@ -36,9 +37,12 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, 
          :confirmable, :omniauthable, :omniauth_providers => [:facebook]
 
-  ## Validations
+  # Validations
   validates :name, :email, :password, presence: true
   validates :email, uniqueness: true
+
+  #Refile methods
+  attachment :image
 
   # Creates a user       
   def self.from_omniauth(auth)
@@ -46,7 +50,7 @@ class User < ActiveRecord::Base
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
       user.name = auth.info.name
-     # user.image = auth.info.image implement this when you implement refile
+      user.image_id = auth.info.image
       user.skip_confirmation!
     end
   end       
