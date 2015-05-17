@@ -36,6 +36,10 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, 
          :confirmable, :omniauthable, :omniauth_providers => [:facebook]
 
+  ## Validations
+  validates :name, :email, :password, presence: true
+  validates :email, uniqueness: true
+
   # Creates a user       
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
