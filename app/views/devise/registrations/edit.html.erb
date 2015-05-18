@@ -22,12 +22,17 @@
         <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
         <%= f.password_field :current_password, autocomplete: "off", class: "form-control form-border" %>
         
-        <%= f.label :profile_image %><i>(upload an image of yourself)</i>
-        <%= attachment_image_tag(resource, :image, :fill, 30, 30) %>
-        <%= f.attachment_field :image, class: "form-border", direct: true %>
-        <%= f.check_box :remove_image %>
-        <%= f.label :remove_profile_image %>
-        
+        <% if current_user.provider %>
+          <div class="form-border">
+            <%= image_tag("#{resource.provider_image}", size: "30x30") %>
+            <%= f.label :profile_image %><i>(upload an image of yourself)</i>
+          </div>
+        <% else %>
+          <%= attachment_image_tag(resource, :image, :fill, 30, 30) %>
+          <%= f.attachment_field :image, class: "form-border", direct: true %>
+          <%= f.check_box :remove_image %>
+          <%= f.label :remove_profile_image %>
+        <% end %>
         <%= f.button "Update", class: "btn btn-primary btn-large btn-block form-border", data: { disable_with: "<i class='fa fa-spinner'></i> Updating......"} %>
       <% end %>
 

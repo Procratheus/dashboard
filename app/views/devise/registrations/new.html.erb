@@ -16,8 +16,7 @@
       <%= f.password_field :password_confirmation, autocomplete: "off", required: true, class: "form-control" %>
       <%= f.label :profile_image %><i>(upload an image of yourself)</i>
       <%= f.attachment_field :image, class: "form-border", direct: true %>
-      <%=  %>
-      <%= f.button "Sign up", class: "btn btn-primary btn-large btn-block form-border", data: { disable_with: "<i class='fa fa-spinner'></i> Signing up......." } %>
+      <%= f.button "Sign up", class: "btn btn-primary btn-large btn-block form-border", data: { disable_with: "<i class='fa fa-spinner'></i>  Signing up......." } %>
     <% end %>
 
     <%= render "devise/shared/links" %>
