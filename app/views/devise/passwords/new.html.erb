@@ -5,7 +5,7 @@
       <%= devise_error_messages! %>
       <%= f.label :email %>
       <%= f.email_field :email, autofocus: true, class: "form-control form-border" %>
-      <%= f.button "Send me reset password instructions", class: "btn btn-primary btn-large btn-block form-border", data: { disable_with: "<i class='fa fa-spinner'></i>Signing up......." }  %>
+      <%= f.button "Send me reset password instructions", class: "btn btn-primary btn-large btn-block form-border", data: { disable_with: "<i class='fa fa-spinner'></i> Sending password......." }  %>
     <% end %>
     <%= render "devise/shared/links" %>
   </div>

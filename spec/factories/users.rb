@@ -23,6 +23,7 @@
 #  provider               :string
 #  uid                    :string
 #  image_id               :string
+#  provider_image         :string
 #
 # Indexes
 #
