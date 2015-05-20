@@ -17,12 +17,11 @@ gem 'figaro', '~> 1.1.0'
 gem 'pundit', '~> 1.0.0'
 gem "mini_magick"
 gem 'refile', '~> 0.5.4', require: ["refile/rails", "refile/image_processing"]
-gem 'refile-fog', '~> 0.1.1'
+gem 'aws-sdk'
 
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
-  gem 'spring'
   gem 'rspec-rails', '~> 3.1.0'
   gem 'shoulda-matchers'
   gem 'capybara', '~> 2.3.0'

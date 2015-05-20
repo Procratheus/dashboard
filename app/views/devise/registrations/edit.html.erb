@@ -29,7 +29,7 @@
           </div>
         <% else %>
           <%= attachment_image_tag(resource, :image, :fill, 30, 30) %>
-          <%= f.attachment_field :image, class: "form-border", direct: true %>
+          <%= f.attachment_field :image, class: "form-border" %>
           <%= f.check_box :remove_image %>
           <%= f.label :remove_profile_image %>
         <% end %>

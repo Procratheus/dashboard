@@ -11,8 +11,8 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << [:name, :image, :image_cache_id]
-    devise_parameter_sanitizer.for(:account_update) << [:name, :image, :image_cache_id, :remove_profile_image]
+    devise_parameter_sanitizer.for(:sign_up) << [:name, :image]
+    devise_parameter_sanitizer.for(:account_update) << [:name, :image,:remove_profile_image]
   end
 
   def user_not_authorized

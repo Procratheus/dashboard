@@ -14,8 +14,8 @@
       <%= f.password_field :password, autocomplete: "off", required: true, class: "form-control" %>
       <%= f.label :password_confirmation %>
       <%= f.password_field :password_confirmation, autocomplete: "off", required: true, class: "form-control" %>
-      <%= f.label :profile_image %><i>(upload an image of yourself)</i>
-      <%= f.attachment_field :image, class: "form-border", direct: true %>
+      <%= f.label :profile_image %>
+      <%= f.attachment_field :image, class: "form-border" %>
       <%= f.button "Sign up", class: "btn btn-primary btn-large btn-block form-border", data: { disable_with: "<i class='fa fa-spinner'></i>" } %>
     <% end %>
 
