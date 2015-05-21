@@ -17,7 +17,7 @@ gem 'figaro', '~> 1.1.0'
 gem 'pundit', '~> 1.0.0'
 gem "mini_magick"
 gem 'refile', '~> 0.5.4', require: ["refile/rails", "refile/image_processing"]
-gem 'aws-sdk'
+gem 'aws-sdk', '<2'
 
 group :development, :test do
   gem 'byebug'
